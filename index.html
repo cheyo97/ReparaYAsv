@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReparaYa SV — Diagnóstico y reparación de dispositivos</title>
+<link rel="stylesheet" href="/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER — logotipo + menú de navegación (5 opciones)
+     ============================================================ -->
+<header>
+
+    <a href="#inicio" class="logo">
+      <!-- Logotipo: llave de tuerca + circuito, dibujado en SVG -->
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="15" stroke="#4fd1c5" stroke-width="2"/>
+        <path d="M11 16h4M17 16h4M16 11v4M16 17v4" stroke="#4fd1c5" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="16" cy="16" r="3" fill="#4fd1c5"/>
+      </svg>
+      ReparaYa <span class="mono" style="color:var(--cyan)">SV</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="navlinks" id="navlinks">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#problema">Problema</a></li>
+      <li><a href="#solucion">Solución</a></li>
+      <li><a href="#caracteristicas">Características</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <a href="#cotizador" class="btn btn-primary navcta">Diagnóstico gratis</a>
+  </nav>
+</header>
+
+<!-- ============================================================
+     INICIO — nombre del proyecto, descripción y llamado a la acción
+     ============================================================ -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">// servicio técnico móvil — san salvador</span>
+      <h1>Tu celular, tablet o laptop, reparado sin vueltas ni sorpresas.</h1>
+      <p class="lede">ReparaYa SV es la plataforma que te deja diagnosticar la falla, ver el precio real antes de reparar y darle seguimiento a tu equipo desde donde estés.</p>
+      <div class="hero-ctas">
+        <a href="#cotizador" class="btn btn-primary">Solicitar diagnóstico gratis</a>
+        <a href="#solucion" class="btn btn-ghost">Cómo funciona</a>
+      </div>
+    </div>
+
+    <!-- Imagen ilustrativa de la página: "ticket de diagnóstico" -->
+    <img alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'></svg>" style="display:none">
+    <div class="ticket scan">
+      <div class="scanline"></div>
+      <div class="ticket-head">
+        <span class="ticket-id mono">ORD-00231</span>
+        <span class="badge">EN DIAGNÓSTICO</span>
+      </div>
+      <svg viewBox="0 0 220 320" width="100%" height="260" xmlns="http://www.w3.org/2000/svg">
+        <rect x="40" y="10" width="140" height="300" rx="18" fill="#212833" stroke="#2c3440" stroke-width="2"/>
+        <rect x="52" y="34" width="116" height="220" rx="4" fill="#12151b"/>
+        <path d="M60 140 L95 90 L120 150 L140 100 L165 160" stroke="#f5a623" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="110" cy="278" r="12" fill="none" stroke="#4fd1c5" stroke-width="2"/>
+      </svg>
+      <p class="fine mono" style="margin-top:10px;">Falla detectada: pantalla agrietada · tiempo estimado: 1 día</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROBLEMA O NECESIDAD
+     ============================================================ -->
+<section id="problema">
+  <div class="wrap">
+    <span class="eyebrow">El problema</span>
+    <h2>Reparar un equipo en El Salvador suele ser una lotería.</h2>
+    <p style="max-width:60ch">Pantallas rotas, baterías que ya no aguantan el día, precios que cambian según a quién le preguntés y talleres donde tu equipo desaparece por días sin que sepás en qué va.</p>
+
+    <div class="cards-4">
+      <div class="pcard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6l4 5-2 3 4 4"/></svg>
+        <h3>Pantallas rotas</h3>
+        <p>La falla más común y la que más tiempo deja el equipo fuera de uso.</p>
+      </div>
+      <div class="pcard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="8" width="18" height="8" rx="2"/><path d="M22 10v4"/></svg>
+        <h3>Baterías gastadas</h3>
+        <p>El equipo se apaga solo o ya no dura ni medio día de uso normal.</p>
+      </div>
+      <div class="pcard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.8 2.1c-.9.6-1.3 1.1-1.3 2.1M12 17h.01"/></svg>
+        <h3>Precios poco claros</h3>
+        <p>Cada taller cotiza distinto y casi nunca por escrito.</p>
+      </div>
+      <div class="pcard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <h3>Sin seguimiento</h3>
+        <p>No hay forma de saber en qué va tu reparación mientras esperás.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SOLUCIÓN
+     ============================================================ -->
+<section id="solucion">
+  <div class="wrap">
+    <span class="eyebrow">La solución</span>
+    <h2>Todo el proceso, en tres pasos, antes de mover un solo tornillo.</h2>
+
+    <div class="steps">
+      <div class="step">
+        <h3>Contanos la falla</h3>
+        <p>Usá el cotizador o el formulario para describir tu equipo y qué le pasa.</p>
+      </div>
+      <div class="step">
+        <h3>Recibí tu cotización</h3>
+        <p>Te mostramos un precio estimado y el tiempo de reparación al instante.</p>
+      </div>
+      <div class="step">
+        <h3>Recogemos y reparamos</h3>
+        <p>Coordinamos recogida a domicilio o cita en taller, y te devolvemos el equipo con garantía.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CARACTERÍSTICAS
+     ============================================================ -->
+<section id="caracteristicas">
+  <div class="wrap">
+    <span class="eyebrow">Características</span>
+    <h2>Lo que hace diferente a ReparaYa SV.</h2>
+
+    <div class="feat-grid">
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        <h3>Diagnóstico gratis</h3>
+        <p>Revisamos tu equipo sin costo y sin compromiso de reparar con nosotros.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        <h3>Precio transparente</h3>
+        <p>Ves el rango de precio antes de autorizar cualquier reparación.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 13l2-6h10l2 6M5 13h14v5H5z"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="16.5" cy="18.5" r="1.5"/></svg>
+        <h3>Servicio a domicilio</h3>
+        <p>Recogemos y entregamos tu equipo en cualquier punto de San Salvador.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg>
+        <h3>Garantía de 90 días</h3>
+        <p>Todo repuesto y mano de obra queda cubierto por tres meses.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 7v5l3 3"/><circle cx="12" cy="12" r="9"/></svg>
+        <h3>Seguimiento en línea</h3>
+        <p>Consultá el estado de tu reparación con tu número de orden.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l3-3M20 4l-9 9M14 4h6v6M4 14v6h6"/></svg>
+        <h3>Técnicos certificados</h3>
+        <p>Personal capacitado en electrónica y reparación de placas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ELEMENTO INNOVADOR — Cotizador interactivo
+     ============================================================ -->
+<section id="cotizador">
+  <div class="wrap">
+    <span class="eyebrow">Elemento innovador</span>
+    <h2>Cotizador instantáneo</h2>
+    <p style="max-width:60ch">Elegí tu dispositivo y la falla que tiene: la cotización se calcula al momento, con precio estimado en dólares y tiempo de entrega.</p>
+
+    <div class="quoter">
+      <div>
+        <div class="field">
+          <label for="device">Tipo de dispositivo</label>
+          <select id="device">
+            <option value="celular">Celular</option>
+            <option value="tablet">Tablet</option>
+            <option value="laptop">Laptop</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="falla">Falla principal</label>
+          <select id="falla">
+            <option value="pantalla">Pantalla rota / dañada</option>
+            <option value="bateria">Batería no carga o se agota rápido</option>
+            <option value="puerto">Puerto de carga dañado</option>
+            <option value="software">No enciende / falla de software</option>
+            <option value="agua">Daño por líquido</option>
+          </select>
+        </div>
+        <button class="btn btn-amber" id="calcBtn" type="button">Calcular cotización</button>
+      </div>
+
+      <div class="result-slip" id="resultSlip">
+        <p class="result-empty" id="resultEmpty">Tu cotización estimada va a aparecer acá.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACTO
+     ============================================================ -->
+<section id="contacto">
+  <div class="wrap">
+    <span class="eyebrow">Contacto</span>
+    <h2>Escribinos y coordinamos tu diagnóstico.</h2>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 012-2h2.28a1 1 0 01.98.8l.92 4.6a1 1 0 01-.5 1.06l-2.03 1.1a12 12 0 006.6 6.6l1.1-2.03a1 1 0 011.06-.5l4.6.92a1 1 0 01.8.98V19a2 2 0 01-2 2h-1C9.6 21 3 14.4 3 6V5z"/></svg>
+          <div>
+            <h3>Teléfono / WhatsApp</h3>
+            <p>+503 7000 0000</p>
+          </div>
+        </div>
+        <div class="row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M21 8l-9 6-9-6"/><path d="M3 6h18v12H3z"/></svg>
+          <div>
+            <h3>Correo</h3>
+            <p>contacto@reparaya.sv</p>
+          </div>
+        </div>
+        <div class="row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div>
+            <h3>Taller</h3>
+            <p>Colonia Escalón, San Salvador. Servicio a domicilio disponible.</p>
+          </div>
+        </div>
+
+        <a class="btn btn-primary" href="https://wa.me/50370000000" target="_blank" rel="noopener" style="margin-top:8px;">
+          Escribir por WhatsApp
+        </a>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" required placeholder="Tu nombre">
+          </div>
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" required placeholder="7000 0000">
+          </div>
+        </div>
+        <div class="field">
+          <label for="dispositivo">Dispositivo</label>
+          <input id="dispositivo" name="dispositivo" type="text" required placeholder="Ej. Samsung A54">
+        </div>
+        <div class="field">
+          <label for="mensaje">Contanos qué le pasa</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Describí la falla..."></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+        <p class="form-msg" id="formMsg">¡Gracias! Te vamos a contactar en menos de 24 horas.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <span class="fine">© 2026 ReparaYa SV — Proyecto escolar, Instituto Nacional General Francisco Menéndez.</span>
+    <div class="social">
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 8h-2a2 2 0 00-2 2v10M8 12h6"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+      <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3v11a3.5 3.5 0 11-3.5-3.5"/><path d="M14 3a5 5 0 005 5"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ============================================================
+     MENÚ MÓVIL (hamburguesa)
+     ============================================================ */
+  const menuToggle = document.getElementById('menuToggle');
+  const navlinks = document.getElementById('navlinks');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navlinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navlinks.classList.remove('open')));
+
+  /* ============================================================
+     COTIZADOR — elemento innovador (Parte 3)
+     Tabla de precios base [min, max] en USD por dispositivo + falla
+     ============================================================ */
+  const PRECIOS = {
+    celular: { pantalla:[40,65], bateria:[20,30], puerto:[15,25], software:[10,20], agua:[30,60] },
+    tablet:  { pantalla:[60,90], bateria:[30,45], puerto:[20,35], software:[15,25], agua:[45,80] },
+    laptop:  { pantalla:[90,150], bateria:[45,70], puerto:[30,50], software:[20,35], agua:[70,120] }
+  };
+  const TIEMPOS = { pantalla:'1 día', bateria:'1 día', puerto:'2 días', software:'1 día', agua:'3 días (con diagnóstico previo)' };
+  const NOMBRE_FALLA = {
+    pantalla:'pantalla rota o dañada', bateria:'batería', puerto:'puerto de carga',
+    software:'falla de software / no enciende', agua:'daño por líquido'
+  };
+
+  const calcBtn = document.getElementById('calcBtn');
+  const resultSlip = document.getElementById('resultSlip');
+
+  calcBtn.addEventListener('click', () => {
+    const device = document.getElementById('device').value;
+    const falla = document.getElementById('falla').value;
+    const [min, max] = PRECIOS[device][falla];
+    const tiempo = TIEMPOS[falla];
+
+    resultSlip.innerHTML = `
+      <span class="stamp mono">COTIZADO</span>
+      <div class="result-price">$${min} – $${max}</div>
+      <div class="result-meta mono">${NOMBRE_FALLA[falla]} · ${device} · entrega: ${tiempo}</div>
+    `;
+    // Forzamos reflow para que la animación del "sello" se reproduzca cada vez
+    resultSlip.classList.remove('show');
+    void resultSlip.offsetWidth;
+    resultSlip.classList.add('show');
+  });
+
+  /* ============================================================
+     FORMULARIO DE CONTACTO — validación simple y mensaje de éxito
+     ============================================================ */
+  const form = document.getElementById('contactForm');
+  const formMsg = document.getElementById('formMsg');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    formMsg.classList.add('show');
+    form.reset();
+  });
+</script>
+</body>
+</html>
